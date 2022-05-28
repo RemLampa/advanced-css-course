@@ -74,6 +74,10 @@ body {
   font-size: calc(60rem / var(--base-font));
   font-weight: 400;
   letter-spacing: calc(35rem / var(--base-font));
+
+  animation-name: moveInLeft;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
 }
 
 .heading-primary-sub {
@@ -81,5 +85,39 @@ body {
   font-size: calc(20rem / var(--base-font));
   font-weight: 700;
   letter-spacing: calc(17.4rem / var(--base-font));
+
+  animation: moveInRight 0.5s ease-out;
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  80% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  80% {
+    transform: translateX(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
