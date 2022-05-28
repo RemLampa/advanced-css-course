@@ -16,14 +16,23 @@ Dark green: #28b485
   box-sizing: inherit;
 }
 
-html {
-  --base-font-size: 62.5%;
-  --light-green: 111deg, 55%, 64%;
-  --medium-green: 140deg, 49%, 55%;
-  --dark-green: 160deg, 64%, 43%;
-  --light-gray: 0deg, 0%, 47%;
-  --white: 0deg, 0%, 100%;
+$base-font-size: 62.5%;
+$primary-color: 140deg, 49%, 55%;
+$primary-color-light: 111deg, 55%, 64%;
+$primary-color-dark: 160deg, 64%, 43%;
+$light-gray: 0deg, 0%, 47%;
+$white: 0deg, 0%, 100%;
 
+:root {
+  --base-font-size: #{$base-font-size};
+  --primary-color: #{$primary-color};
+  --primary-color-light: #{$primary-color-light};
+  --primary-color-dark: #{$primary-color-dark}; 
+  --light-gray: #{$light-gray};
+  --white: #{$white};
+}
+
+html {
   font-size: var(--base-font-size);
 }
 
@@ -31,7 +40,7 @@ body {
   font-family: "Lato", sans-serif;
   font-weight: var(--font-weight-normal);
   line-height: 1.7;
-  color: hsl(var(--light-gray));
+  color: #{'hsl(var(--light-gray))'};
   box-sizing: border-box;
   font-size: 1.6rem;
 
@@ -42,8 +51,8 @@ body {
   height: 95vh;
   background-image: linear-gradient(
       to right bottom,
-      hsl(var(--light-green), 0.8),
-      hsl(var(--dark-green), 0.8)
+      #{'hsl(var(--primary-color-light), 0.8)'},
+      #{'hsl(var(--primary-color-dark), 0.8)'}
     ),
     url("../img/hero.jpg");
   background-size: cover;
@@ -73,7 +82,7 @@ body {
 }
 
 .heading-primary {
-  color: hsl(var(--white));
+  color: #{'hsl(var(--white))'};
   text-transform: uppercase;
   margin-bottom: 6rem;
 }
@@ -160,17 +169,17 @@ body {
 
 .btn:hover {
   transform: translateY(-0.3rem);
-  box-shadow: 0 1rem 2rem hsl(0deg, 0%, 0%, 0.2);
+  box-shadow: 0 1rem 2rem #{'hsl(0deg, 0%, 0%, 0.2)'};
 }
 
 .btn:active {
   transform: translateY(-0.1rem);
-  box-shadow: 0 0.5rem 1rem hsl(0deg, 0%, 0%, 0.2);
+  box-shadow: 0 0.5rem 1rem #{'hsl(0deg, 0%, 0%, 0.2)'};
 }
 
 .btn--white {
-  background-color: hsl(var(--white));
-  color: hsl(var(--light-gray));
+  background-color: #{'hsl(var(--white))'};
+  color: #{'hsl(var(--light-gray))'};
   padding: 1.5rem 4rem;
 }
 
@@ -192,7 +201,7 @@ body {
 }
 
 .btn--white::after {
-  background-color: hsl(var(--white));
+  background-color: #{'hsl(var(--white))'};
 }
 
 .btn:hover::after {
