@@ -7,28 +7,35 @@ Dark green: #28b485
 
 */
 
-* {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+
+  box-sizing: inherit;
 }
 
-body {
+html {
+  --base-font-size: 62.5%;
   --light-green: 111deg, 55%, 64%;
   --medium-green: 140deg, 49%, 55%;
   --dark-green: 160deg, 64%, 43%;
   --light-gray: 0deg, 0%, 47%;
   --white: 0deg, 0%, 100%;
 
-  --base-font: 16;
+  font-size: var(--base-font-size);
+}
 
+body {
   font-family: "Lato", sans-serif;
   font-weight: var(--font-weight-normal);
-  font-size: var(--base-font) px;
   line-height: 1.7;
   color: hsl(var(--light-gray));
+  box-sizing: border-box;
+  font-size: 1.6rem;
 
-  padding: 30px;
+  padding: 3rem;
 }
 
 .header {
@@ -48,12 +55,12 @@ body {
 
 .logo-container {
   position: absolute;
-  top: 40px;
-  left: 40px;
+  top: 4rem;
+  left: 4rem;
 }
 
 .logo {
-  height: 35px;
+  height: 3.5rem;
 }
 
 .hero-container {
@@ -68,13 +75,14 @@ body {
 .heading-primary {
   color: hsl(var(--white));
   text-transform: uppercase;
+  margin-bottom: 6rem;
 }
 
 .heading-primary-main {
   display: block;
-  font-size: calc(60rem / var(--base-font));
+  font-size: 6rem;
   font-weight: 400;
-  letter-spacing: calc(35rem / var(--base-font));
+  letter-spacing: 3.5rem;
 
   animation-name: moveInLeft;
   animation-duration: 0.5s;
@@ -83,23 +91,21 @@ body {
 
 .heading-primary-sub {
   display: block;
-  font-size: calc(20rem / var(--base-font));
+  font-size: 2rem;
   font-weight: 700;
-  letter-spacing: calc(17.4rem / var(--base-font));
+  letter-spacing: 1.75rem;
 
   animation: moveInRight 0.5s ease-out;
-
-  margin-bottom: 16px;
 }
 
 @keyframes moveInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-100px);
+    transform: translateX(-10rem);
   }
 
   80% {
-    transform: translateX(10px);
+    transform: translateX(1rem);
   }
 
   100% {
@@ -111,11 +117,11 @@ body {
 @keyframes moveInRight {
   0% {
     opacity: 0;
-    transform: translateX(100px);
+    transform: translateX(10rem);
   }
 
   80% {
-    transform: translateX(-10px);
+    transform: translateX(-1rem);
   }
 
   100% {
@@ -127,7 +133,7 @@ body {
 @keyframes moveInBottom {
   0% {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(3rem);
   }
 
   100% {
@@ -141,26 +147,29 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   display: inline-block;
-  border-radius: 500px;
+  border-radius: 50rem;
 
   transition: transform 0.2s;
   position: relative;
+  font-size: 1.6rem;
+
+  will-change: transform;
 }
 
 .btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px hsl(0deg, 0%, 0%, 0.2);
+  transform: translateY(-0.3rem);
+  box-shadow: 0 1rem 2rem hsl(0deg, 0%, 0%, 0.2);
 }
 
 .btn:active {
-  transform: translateY(-1px);
-  box-shadow: 0 5px 10px hsl(0deg, 0%, 0%, 0.2);
+  transform: translateY(-0.1rem);
+  box-shadow: 0 0.5rem 1rem hsl(0deg, 0%, 0%, 0.2);
 }
 
 .btn-white {
   background-color: hsl(var(--white));
   color: hsl(var(--light-gray));
-  padding: 15px 40px;
+  padding: 1.5rem 4rem;
 }
 
 .btn::after {
@@ -168,7 +177,7 @@ body {
   display: inline-block;
   height: 100%;
   width: 100%;
-  border-radius: 500px;
+  border-radius: 50rem;
 
   position: absolute;
   top: 0;
@@ -176,6 +185,8 @@ body {
   z-index: -1;
 
   transition: transform 0.4s, opacity 0.4s;
+
+  will-change: transform;
 }
 
 .btn-white::after {
