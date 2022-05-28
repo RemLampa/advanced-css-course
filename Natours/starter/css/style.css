@@ -87,6 +87,7 @@ body {
   animation-name: moveInLeft;
   animation-duration: 0.5s;
   animation-timing-function: ease-out;
+  margin-right: -3.5rem; /* center in box */
 }
 
 .heading-primary--sub {
@@ -96,6 +97,7 @@ body {
   letter-spacing: 1.75rem;
 
   animation: moveInRight 0.5s ease-out;
+  margin-right: -1.75rem; /* center in box */
 }
 
 @keyframes moveInLeft {
