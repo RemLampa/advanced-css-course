@@ -6,3 +6,80 @@ Medium green: #55c57a
 Dark green: #28b485
 
 */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  --light-green: 111deg, 55%, 64%;
+  --medium-green: 140deg, 49%, 55%;
+  --dark-green: 160deg, 64%, 43%;
+  --light-gray: 0deg, 0%, 47%;
+  --white: 0deg, 0%, 100%;
+
+  --base-font: 16;
+
+  font-family: "Lato", sans-serif;
+  font-weight: var(--font-weight-normal);
+  font-size: var(--base-font) px;
+  line-height: 1.7;
+  color: hsl(var(--light-gray));
+
+  padding: 30px;
+}
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(
+      to right bottom,
+      hsl(var(--light-green), 0.8),
+      hsl(var(--dark-green), 0.8)
+    ),
+    url("../img/hero.jpg");
+  background-size: cover;
+  background-position: center top;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 75vh, 0% 100%);
+
+  position: relative;
+}
+
+.logo-container {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+.logo {
+  height: 35px;
+}
+
+.hero-container {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+.heading-primary {
+  color: hsl(var(--white));
+  text-transform: uppercase;
+}
+
+.heading-primary-main {
+  display: block;
+  font-size: calc(60rem / var(--base-font));
+  font-weight: 400;
+  letter-spacing: calc(35rem / var(--base-font));
+}
+
+.heading-primary-sub {
+  display: block;
+  font-size: calc(20rem / var(--base-font));
+  font-weight: 700;
+  letter-spacing: calc(17.4rem / var(--base-font));
+}
+
