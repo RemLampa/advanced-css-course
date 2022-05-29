@@ -6,6 +6,10 @@ $light-gray: 0deg, 0%, 47%;
 $white: 0deg, 0%, 100%;
 $black: 0deg, 0%, 0%;
 
+$grid-width: 114rem;
+$gutter-vertical: 8rem;
+$gutter-horizontal: 6rem;
+
 :root {
   --base-font-size: #{$base-font-size};
   --primary-color: #{$primary-color};
@@ -14,4 +18,8 @@ $black: 0deg, 0%, 0%;
   --light-gray: #{$light-gray};
   --white: #{$white};
   --black: #{$black};
+
+  --grid-width: #{$grid-width};
+  --gutter-vertical: #{$gutter-vertical};
+  --gutter-horizontal: #{$gutter-horizontal};
 }
