@@ -11,8 +11,6 @@
   [class^="col-"] {
     float: left;
 
-    background-color: red;
-
     &:not(:last-child) {
       margin-right: var(--gutter-horizontal);
     }

@@ -2,22 +2,27 @@ $base-font-size: 62.5%;
 $primary-color: 140deg, 49%, 55%;
 $primary-color-light: 111deg, 55%, 64%;
 $primary-color-dark: 160deg, 64%, 43%;
-$light-gray: 0deg, 0%, 47%;
 $white: 0deg, 0%, 100%;
 $black: 0deg, 0%, 0%;
+
+$light-gray: 0deg, 0%, 47%;
+$color-grey-light-1: 0deg, 0%, 97%;
 
 $grid-width: 114rem;
 $gutter-vertical: 8rem;
 $gutter-horizontal: 6rem;
+
 
 :root {
   --base-font-size: #{$base-font-size};
   --primary-color: #{$primary-color};
   --primary-color-light: #{$primary-color-light};
   --primary-color-dark: #{$primary-color-dark}; 
-  --light-gray: #{$light-gray};
   --white: #{$white};
   --black: #{$black};
+
+  --light-gray: #{$light-gray};
+  --color-grey-light-1: #{$color-grey-light-1};
 
   --grid-width: #{$grid-width};
   --gutter-vertical: #{$gutter-vertical};
