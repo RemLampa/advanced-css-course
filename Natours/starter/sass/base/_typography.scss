@@ -3,7 +3,7 @@ body {
   font-weight: var(--font-weight-normal);
   line-height: 1.7;
   color: #{'hsl(var(--light-gray))'};
-  font-size: 1.6rem;
+  font-size: var(--default-font-size);
 
   padding: 3rem;
 }
@@ -55,5 +55,19 @@ body {
   &:hover {
     transform: skewY(2deg) skewX(15deg) scale(1.1);
     text-shadow: .5rem 1rem 2rem #{'hsl(var(--black), 0.2)'};
+  }
+}
+
+.heading-tertiary {
+  font-size: var(--default-font-size);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.paragraph {
+  font-size: var(--default-font-size);
+
+  &:not(:last-child) {
+    margin-bottom: 3rem;
   }
 }

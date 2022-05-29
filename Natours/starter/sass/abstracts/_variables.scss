@@ -1,4 +1,6 @@
 $base-font-size: 62.5%;
+$default-font-size: 1.6rem;
+
 $primary-color: 140deg, 49%, 55%;
 $primary-color-light: 111deg, 55%, 64%;
 $primary-color-dark: 160deg, 64%, 43%;
@@ -13,8 +15,11 @@ $gutter-vertical: 8rem;
 $gutter-horizontal: 6rem;
 
 
+
 :root {
   --base-font-size: #{$base-font-size};
+  --default-font-size: #{$default-font-size};
+
   --primary-color: #{$primary-color};
   --primary-color-light: #{$primary-color-light};
   --primary-color-dark: #{$primary-color-dark}; 
