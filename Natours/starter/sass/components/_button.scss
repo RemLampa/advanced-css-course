@@ -38,6 +38,16 @@
     }
   }
 
+  &--green {
+    background-color: #{'hsl(var(--primary-color))'};
+    color: #{'hsl(var(--white))'};
+    padding: 1.5rem 4rem;
+
+    &::after {
+      background-color: #{'hsl(var(--primary-color))'};
+    }
+  }
+
   &::after {
     content: "";
     display: inline-block;
