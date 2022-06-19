@@ -8,6 +8,7 @@
   padding-left: 9rem;
   font-size: var(--default-font-size);
   transform: skewX(-12deg);
+  background-color: #{'hsla(var(--white), 0.6)'};
 
   &__shape {
     width: 15rem;
