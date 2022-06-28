@@ -1,4 +1,5 @@
 .btn {
+  &,
   &:link,
   &:visited {
     text-transform: uppercase;
@@ -11,6 +12,10 @@
     font-size: var(--default-font-size);
 
     will-change: transform;
+
+    // change for <button> element
+    border: none;
+    cursor: pointer;
   }
 
   &:hover {
@@ -23,7 +28,9 @@
     }
   }
 
-  &:active {
+  &:active,
+  &:focus {
+    outline: none;
     transform: translateY(-0.1rem);
     box-shadow: 0 0.5rem 1rem #{'hsl(var(--black), 0.2)'};
   }
