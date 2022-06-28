@@ -1,0 +1,60 @@
+.footer {
+  background-color: #{'hsl(var(--color-grey-dark-3))'};
+  padding: 10rem 0;
+  font-size: 1.4rem;
+  color: #{'hsl(var(--color-grey-light-1))'};
+
+  &__logo-box {
+    text-align: center;
+    margin-bottom: 8rem;
+  }
+
+  &__logo {
+    width: 15rem;
+    height: auto;
+  }
+
+  &__navigation {
+    border-top: 1px solid #{'hsl(var(--light-gray))'};
+    padding-top: 2rem;
+    display: inline-block;
+  }
+  
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    display: inline-block;
+    
+    &:not(:last-child) {
+      margin-right: 1.5rem;
+    }
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      color: #{'hsl(var(--color-grey-light-1))'};
+      background-color: #{'hsl(var(--color-grey-dark-3))'};
+      text-decoration: none;
+      text-decoration: uppercase;
+      display: inline-block;
+      transition: transform 0.2s;
+    }
+
+    &:hover,
+    &:active {
+      color: #{'hsl(var(--primary-color))'};
+      box-shadow: 0 1rem 2rem #{'hsl(var(--black), 0.4)'};
+      transform: rotate(5deg) scale(1.3);
+    }
+  }
+
+  &__copyright {
+    border-top: 1px solid #{'hsl(var(--light-gray))'};
+    padding-top: 2rem;
+    width: 80%;
+    float: right;
+  }
+}
