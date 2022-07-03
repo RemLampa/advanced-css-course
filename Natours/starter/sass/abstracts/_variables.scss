@@ -22,6 +22,7 @@ $color-gray-dark-3: 0deg, 0%, 20%;
 
 $grid-width: 114rem;
 $gutter-vertical: 8rem;
+$gutter-vertical-small: 6rem;
 $gutter-horizontal: 6rem;
 
 :root {
@@ -49,5 +50,6 @@ $gutter-horizontal: 6rem;
 
   --grid-width: #{$grid-width};
   --gutter-vertical: #{$gutter-vertical};
+  --gutter-vertical-small: #{$gutter-vertical-small};
   --gutter-horizontal: #{$gutter-horizontal};
 }

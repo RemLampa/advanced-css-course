@@ -4,8 +4,6 @@ body {
   line-height: 1.7;
   color: #{'hsl(var(--light-gray))'};
   font-size: var(--default-font-size);
-
-  padding: 3rem;
 }
 
 .heading-primary {
@@ -23,6 +21,11 @@ body {
     animation-duration: 0.5s;
     animation-timing-function: ease-out;
     margin-right: -3.5rem; /* center in box */
+
+    @include respond(phone) {
+      letter-spacing: 1rem;
+      font-size: 5rem;
+    }
   }
 
   &--sub {
@@ -33,6 +36,10 @@ body {
 
     animation: moveInRight 0.5s ease-out;
     margin-right: -1.75rem; /* center in box */
+
+    @include respond(phone) {
+      letter-spacing: 0.5rem;
+    }
   }
 }
 
@@ -51,6 +58,14 @@ body {
 
   -webkit-background-clip: text;
   color: transparent;
+
+  @include respond(tab-port) {
+    font-size: 3rem;
+  }
+
+  @include respond(phone) {
+    font-size: 2.5rem;
+  }
 
   &:hover {
     transform: skewY(2deg) skewX(15deg) scale(1.1);
