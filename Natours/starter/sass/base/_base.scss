@@ -37,3 +37,8 @@ main {
   max-width: 1650px;
   margin: 0 auto;
 }
+
+::selection {
+  background-color: #{'hsl(var(--primary-color))'};
+  color: #{'hsl(var(--white))'};
+}
