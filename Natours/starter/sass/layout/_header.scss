@@ -5,7 +5,7 @@
       #{'hsl(var(--primary-color-light), 0.8)'},
       #{'hsl(var(--primary-color-dark), 0.8)'}
     ),
-    url("../img/hero.jpg");
+    url("../img/hero-small.jpg");
   background-size: cover;
   background-position: center top;
   webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75vh, 0% 100%);
@@ -14,6 +14,17 @@
   margin: 0 auto;
 
   position: relative;
+
+  @media (min-resolution: 192dpi) and (min-width: 37.5em), 
+    (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), 
+    (min-width: 125em) {
+    background-image: linear-gradient(
+      to right bottom,
+      #{'hsl(var(--primary-color-light), 0.8)'},
+      #{'hsl(var(--primary-color-dark), 0.8)'}
+    ),
+    url("../img/hero.jpg");
+  }
 
   @include respond(phone) {
     webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 85vh, 0% 100%);
